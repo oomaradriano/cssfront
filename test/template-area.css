@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  /* overflow: hidden; */
+}
+
+/*  Orden de las propiedades 
+      Posicionamiento
+          *Position
+          *top,left,right,bottom
+          *Z-index
+      Modelo de caja
+          *Display
+          *Height
+          *Width
+      Tipografía y texto
+          *Fonts
+          *Colores de fuente
+      Visual
+          *Background-color
+          *Border-radius
+      Miscelanea
+          *Opacity
+          Entre otros
+      Animaciones y transiciones al final de todo
+    Consideraciones
+        *Deben de hacerce cuadrados, no se puede poner
+        el mismo componente en varios lugares, evitando
+        la creación de un cuadrado
+  */
+
+.container {
+  position: relative;
+
+  display: grid;
+  height: auto;
+  min-width: 320px;
+  width: 100vw;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows:
+    55px
+    calc(100vh - 55px)
+    100px
+    200px
+    60px;
+
+  grid-template-areas:
+    "area-1"
+    "area-2"
+    "aux"
+    "area-4"
+    "area-3";
+}
+
+.element-1 {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: area-1;
+
+  background-color: red;
+}
+.element-2 {
+  position: relative;
+
+  grid-area: area-2;
+
+  background-color: black;
+}
+.element-3 {
+  position: relative;
+
+  display: flex;
+
+  grid-area: area-3;
+
+  background-color: blue;
+}
+
+.element-4 {
+  grid-area: area-4;
+
+  background-color: orange;
+}
+.element-5 {
+  grid-area: aux;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: green;
+}
+.element-5 > div {
+  height: 50px;
+  width: 50px;
+}
+.subelem-1 {
+  background-color: aquamarine;
+}
+.subelem-2 {
+  background-color: black;
+}
+.subelem-3 {
+  background-color: blueviolet;
+}
+.subelem-4 {
+  background-color: chocolate;
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:
+      55px
+      calc(100vh - 55px)
+      200px
+      60px;
+
+    grid-template-areas:
+      "area-1 area-1 area-1 area-1 area-1"
+      "area-2 area-2 area-2 area-2 aux"
+      "area-4 area-4 area-4 area-4 area-4"
+      "area-3 area-3 area-3 area-3 area-3";
+  }
+  .element-5 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:
+      55px
+      calc(50vh - 55px)
+      100px
+      200px
+      60px;
+
+    grid-template-areas:
+      "area-1 area-1 area-1 area-1 area-1"
+      "area-2 area-2 area-2 aux aux"
+      "area-4 area-4 area-4 area-4 area-4"
+      "area-3 area-3 area-3 area-3 area-3"
+      "area-3 area-3 area-3 area-3 area-3";
+  }
+  .element-5 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
