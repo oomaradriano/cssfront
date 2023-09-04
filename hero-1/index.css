@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+:root {
+  --main: #a5a58d;
+}
+
+body {
+  background-color: var(--main);
+  /* overflow-x: hidden; */
+  width: 100vw;
+  /* overflow-x: hidden; */
+}
+
+/*  Orden de las propiedades 
+        Posicionamiento
+            *Position
+            *top,left,right,bottom
+            *Z-index
+        Modelo de caja
+            *Display
+            *Height
+            *Width
+        Tipografía y texto
+            *Fonts
+            *Colores de fuente
+        Visual
+            *Background-color
+            *Border-radius
+        Miscelanea
+            *Opacity
+            Entre otros
+        Animaciones y transiciones al final de todo
+      Consideraciones
+          *Deben de hacerce cuadrados, no se puede poner
+          el mismo componente en varios lugares, evitando
+          la creación de un cuadrado
+    */
+
+.container {
+  height: auto;
+  /* width: 100vw; */
+  max-width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 60px 1fr 100px;
+  grid-template-columns: 70px repeat(8, 1fr) 70px;
+
+  grid-template-areas:
+    ". nav nav nav nav nav nav nav nav ."
+    ". main main main main main main main main ."
+    ". footer footer footer footer footer footer footer footer .";
+}
+
+/* ----- Nav ----- */
+.nav {
+  grid-area: nav;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 45px;
+
+  background-color: var(--main);
+}
+.nav__leftside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav__rightside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav__rightside > div {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* ----- Main ----- */
+
+.main {
+  /* background-color: black; */
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-right: 2px solid #b7b7a4;
+  border-left: 2px solid #b7b7a4;
+}
+
+.main__slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: calc(100% - 160px); */
+}
+
+.main__slider img {
+  content: "Image";
+  display: block;
+  /* object-fit: cover; */
+  width: 100%;
+}
+
+/* ----- Footer ----- */
+
+.footer {
+  grid-area: footer;
+  /* background-color: orange; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__option {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  cursor: pointer;
+
+  /* background-color: yellowgreen; */
+}
+.footer__option:hover:after {
+  position: absolute;
+  top: 0;
+
+  height: 5px;
+  width: 100%;
+
+  content: "";
+
+  background-color: gray;
+
+  border-radius: 2px;
+}
+
+
+/* ----- Features ----- */
+
+.features {
+    /* width: 100vw; */
+    display: grid;
+    /* grid-template-columns: 90px repeat(3, 1fr) 90px; */
+    max-width: 100%;
+    height: 70vw;
+
+    background-color: #ffe8d6;
+}
