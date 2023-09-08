@@ -44,11 +44,13 @@ body {
 }
 
 .first {
-    background: url('/apollyLandingPage/src/icons/bg.png');
-    height: 1100px;
-    display: flex;
     position: relative;
+
+    display: flex;
     flex-direction: column;
+    height: 1100px;
+
+    background: url('/apollyLandingPage/src/imgs/bg.png');
 
 }
 
@@ -71,40 +73,49 @@ body {
 .nav__burguer {
     position: relative;
     left: 5px;
-    height: 20px;
-    width: 25px;
-    /* background-color: red; */
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 20px;
     align-items: center;
+    width: 25px;
+    
+    /* background-color: red; */
 }
 .nav__burguer > .div {
     height: 2px;
-    border-radius: 3px;
     width: 80%;
+    
     background-color: black;
+    
+    border-radius: 3px;
 }
 
 .nav__button{
     height: 95%;
-    padding: 0 10px;
     margin: 2px;
-    border-radius: 5px;
-    border: none;
-    background-color: #5956e9;
+    padding: 0 10px;
+    
     color: white;
+    
+    background-color: #5956e9;
+    
+    border: none;
+    border-radius: 5px;
 }
 .nav__icon {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     left: calc(50% - 50px);
-    height: 45px;
-    border-radius: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
+    height: 45px;
+    
     background-color: #fff;
+    border-radius: 5px;
     box-shadow: 0 0 0.5px 0.5px #cbcbcb;
 }
 .nav__icon > img {
@@ -114,21 +125,24 @@ body {
 
 .announce {
     position: relative;
-    padding: 15px;
     z-index: 10;
     top: 175px;
+    
     align-self: center;
     height: 250px;
     width: 75%;
+    padding: 15px;
     max-width: 500px;
+    
     background-color: #fff;
     /* border: 10px solid var(--border-color); */
 }
 
 .announce > h3 {
+    margin-bottom: 10px;
+    
     font-weight: 700;
     color: var(--main-color);
-    margin-bottom: 10px;
 }
 
 .announce > p {
@@ -138,16 +152,19 @@ body {
     position: absolute;
     bottom: 55px;
     left: 22px;
+    
     letter-spacing: 3px;
 }
 
 .announce__downloads {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
     bottom: 15px;
     left: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    
+    column-gap: 10px;
 }
 
 .announce__downloads > img {
@@ -168,27 +185,30 @@ body {
     border: 10px solid var(--border-color);
 } */
 .announce + .border {
-    display: block;
-    content: " ";
     position: relative;
-    align-self: center;
-    top: -95px;
-    height: 290px;
     left: 20px;
+    top: -95px;
     z-index: 0;
+    
+    display: block;
+    height: 290px;
     width: 75%;
+    align-self: center;
     max-width: 500px;
+    
+    content: " ";
     border: 10px solid var(--border-color);
 }
 
 .mobileApp {
     position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: center;
     width: 80%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
