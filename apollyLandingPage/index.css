@@ -34,12 +34,14 @@
 
 html {
     width: 100vw;
+    height: 100%;
 
 }
 
 body {
     min-width: 320px;
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -68,6 +70,7 @@ body {
 
     background-color: #fff;
     border-radius: 5px;
+    box-shadow: 2px 2px 4px 0.3px rgba(0, 0, 0, 0.3);
 }
 
 .nav__burguer {
@@ -202,6 +205,7 @@ body {
 
 .mobileApp {
     position: relative;
+    margin: auto;
     
     display: flex;
     justify-content: center;
@@ -211,6 +215,100 @@ body {
     height: auto;
 }
 
+/* --------------------------------------------------------------- */
+/* ---------------------------- about ---------------------------- */
+/* --------------------------------------------------------------- */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 350px 350px;
+    width: 100%;
+    margin-top: 30px;
+    /* padding: 100px; */
+    padding-bottom: 100px;
+}
+
+.titleNdesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutCardFeatures {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleNdesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    padding: 0 20px;
+}
+
+.mobileApp__about {
+
+    grid-area: 2/1/3/2;
+    /* margin-top: 40px; */
+}
+
+.titleNdesc__title {
+    margin: 10px 0 30px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.titleNdesc__desc {
+    margin: 20px 0 20px 0;
+
+}
+
+.aboutCardFeatures {
+    /* position: relative; */
+
+    grid-area: 3/1/4/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.aboutCardFeature {
+    position: relative;
+
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center; */
+    margin: 10px 0;
+    padding: 10px 10px 10px 90px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.1);
+    max-width: 390px;
+    min-height: 110px;
+}
+
+.aboutCardFeature__title {
+    font-size: 20px;
+    margin: 10px 0 15px 0;
+    letter-spacing: 2PX;
+}
+
+.aboutCardFeature__desc {
+    font-size: 16px;
+}
+
+.aboutCardFeature__icon {
+    position: absolute;
+    font-size: 30px !important;
+    left: 40px;
+    top: 18px;
+    color: var(--main-color);
+}
 
 @media screen and (min-width:320px) {
     /* .nav {} */
