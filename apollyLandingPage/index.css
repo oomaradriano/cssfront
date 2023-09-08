@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -9,14 +10,192 @@
     --border-color: #7572ff;
 }
 
-@media screen and (min-width:320px){
-    
+/* Orden de las propiedades 
+    Posicionamiento
+        *Position
+        *top,left,right,bottom
+        *Z-index
+    Modelo de caja
+        *Display
+        *Height
+        *Width
+    Tipografía y texto
+        *Fonts
+        *Colores de fuente
+    Visual
+        *Background-color
+        *Border-radius
+    Miscelanea
+        *Opacity
+        Entre otros
+    Animaciones y transiciones al final de todo
+
+*/
+
+html {
+    width: 100vw;
+
 }
 
-@media screen and (min-width:768px){
-    
+body {
+    min-width: 320px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-@media screen and (min-width:1024px){
-    
+.first {
+    background: url('/apollyLandingPage/src/icons/bg.png');
+    height: 1100px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
 }
+
+.nav {
+    position: fixed;
+    z-index: 50;
+    top: 45px;
+    left: calc(50% - 42.5vw);
+    width: 85vw;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.nav__burguer {
+    position: relative;
+    left: 5px;
+    height: 20px;
+    width: 25px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav__burguer > .div {
+    height: 2px;
+    border-radius: 3px;
+    width: 80%;
+    background-color: black;
+}
+
+.nav__button{
+    height: 95%;
+    padding: 0 10px;
+    margin: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5956e9;
+    color: white;
+}
+.nav__icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: calc(50% - 50px);
+    height: 45px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 0.5px 0.5px #cbcbcb;
+}
+.nav__icon > img {
+    height: 12px;
+    width: auto;
+}
+
+.announce {
+    position: relative;
+    padding: 15px;
+    z-index: 10;
+    top: 175px;
+    align-self: center;
+    height: 250px;
+    width: 75%;
+    max-width: 500px;
+    background-color: #fff;
+    /* border: 10px solid var(--border-color); */
+}
+
+.announce > h3 {
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.announce > p {
+    margin: 10px 0;
+}
+.announce > h5 {
+    position: absolute;
+    bottom: 55px;
+    left: 22px;
+    letter-spacing: 3px;
+}
+
+.announce__downloads {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    bottom: 15px;
+    left: 20px;
+}
+
+.announce__downloads > img {
+    height: 30px;
+    width: auto;
+}
+
+/* .announce > .border {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    z-index: -10;
+    height: calc(100% + 20px);
+    width: calc(80% + 50px);
+    background-color: red;
+    border: 10px solid var(--border-color);
+} */
+.announce + .border {
+    display: block;
+    content: " ";
+    position: relative;
+    align-self: center;
+    top: -95px;
+    height: 290px;
+    left: 20px;
+    z-index: 0;
+    width: 75%;
+    max-width: 500px;
+    border: 10px solid var(--border-color);
+}
+
+.mobileApp {
+    position: relative;
+    align-self: center;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (min-width:320px) {
+    /* .nav {} */
+}
+
+@media screen and (min-width:768px) {}
+
+@media screen and (min-width:1024px) {}
