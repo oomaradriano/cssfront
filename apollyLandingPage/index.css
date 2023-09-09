@@ -226,7 +226,7 @@ body {
     width: 100%;
     margin-top: 30px;
     /* padding: 100px; */
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 }
 
 .titleNdesc {
@@ -289,12 +289,12 @@ body {
     border-radius: 4px;
     box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.1);
     max-width: 390px;
-    min-height: 110px;
+    min-height: 130px;
 }
 
 .aboutCardFeature__title {
     font-size: 20px;
-    margin: 10px 0 15px 0;
+    margin: 5px 0 5px 0;
     letter-spacing: 2PX;
 }
 
@@ -310,9 +310,57 @@ body {
     color: var(--main-color);
 }
 
-@media screen and (min-width:320px) {
-    /* .nav {} */
+/* --------------------------------------------------------------- */
+/* ------------------------ App Features ------------------------- */
+/* --------------------------------------------------------------- */
+
+.appFeatures {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    height: 2150px;
+
+    text-align: center;
+
+    background: url('src/imgs/bgFeatures.png');
+    background-size: cover;
 }
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 340px;
+    text-align: center;
+}
+
+.feature:nth-child(n){
+    color: #fff;
+}
+.aboutCardFeature__title--featuresTitle {
+    font-size: 25px;
+    margin: 30px 0;
+    color: #fff;
+}
+.appFeatures__desc {
+    color: #fff;
+}
+
+.aboutCardFeature__title--FEATURES {
+    margin: 30px 0;
+}
+
+.feature__icon--FEATURES {
+    font-size: 45px !important;
+}
+
+
+@media screen and (min-width:425px) {}
 
 @media screen and (min-width:768px) {}
 
